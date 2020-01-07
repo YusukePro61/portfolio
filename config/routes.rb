@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :articles
+  resources :articles do
+    resources :comments, only: [:create]
+  end
+  resources :mypages, only: [:show]
   root 'articles#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
