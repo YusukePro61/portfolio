@@ -6,10 +6,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
+    redirect_to root_path
   end
 
   def index
-    @articles = Article.order(DESC)
+    @articles = Article
   end
 
   def show
@@ -25,6 +26,7 @@ class ArticlesController < ApplicationController
     article = Article.find(params[:id])
     if article.user_id == current_user.id
       article.update(article_params)
+      redirect_to root_path
     end
   end
 
@@ -33,6 +35,7 @@ class ArticlesController < ApplicationController
     if article.user_id == current_user.id
       article.destroy
     end
+    redirect_to root_path
   end
 
   private
