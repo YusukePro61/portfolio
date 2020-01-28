@@ -1,0 +1,14 @@
+.header{
+  background-color: black;
+  color: white;
+  &__box{
+    text-align: center;
+    font-size: 45px;
+  }
+  &__contents{
+    text-align: center;
+    &__menu{
+      list-style: none;
+    }
+  }
+}
