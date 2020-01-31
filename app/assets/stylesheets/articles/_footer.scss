@@ -1,0 +1,26 @@
+.footer{
+  background: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  &__logo{
+    display:block;
+    float: right;
+    font-size: .8em;
+    padding: .6em 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-right: 150px;
+  }
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body{
+  position: relative;
+  height: 100%;
+}
