@@ -1,14 +1,29 @@
 .header{
+  box-sizing: border-box;
   background-color: black;
   color: white;
   &__box{
     text-align: center;
     font-size: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   &__contents{
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
     &__menu{
       list-style: none;
+      display: inline-block;
+      &__list{
+              display: flex;
+        &__select{
+          padding-left: 40px;
+        }
+        .first-select{
+          padding: 0;
+        }
+      }
     }
   }
 }
