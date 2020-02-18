@@ -1,0 +1,19 @@
+.contents
+  .container
+    %h2 記事投稿
+    = form_with model: @article, local: true do |f|
+      .fields
+        .field
+          =f.label :title, 'タイトル', class: 'label'
+          %br
+          =f.text_field :title, class: 'form-control'
+        .field.cutom-file
+          =f.label :image, '画像', class: 'label'
+          %br
+          =f.file_field :image, class: 'form-control-file'
+        .field
+          =f.label :detail, '本文', class: 'label'
+          %br
+          =f.text_area :detail, class: 'form-control'
+        .field
+          =f.submit '送信', class: 'btn btn-primary'
